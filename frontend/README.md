@@ -54,20 +54,35 @@
 ### Persiapan Backend (Laravel)
 
 ```bash
-cd backend
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan serve
+* git clone https://github.com/iwanazhari/taskManager
+* cd taskManager/backend
+* composer install
+* cp .env.example .env
+* php artisan key:generate
+* Edit file .env:
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=nama_database
+   DB_USERNAME=root
+   DB_PASSWORD=
+
+* php artisan migrate
+* php artisan serve
+
 ```
 
 ### Persiapan Frontend (Next.js)
 
 ```bash
-cd frontend
-cp .env.example .env.local
-pnpm install
-pnpm dev
+* git clone https://github.com/iwanazhari/taskManager
+* cd taskManager/frontend
+* npm install (jika menggunakan npm)
+* yarn install (jika menggunakan yarn)
+* mkdir .env (NEXT_PUBLIC_API_URL=http://IP_address:8000)
+* yarn dev / npm run dev ( sesuaikan yg anda gunakan)
+
+
 ```
 
 ### Konfigurasi Environment
@@ -75,13 +90,13 @@ pnpm dev
 **.env.local (frontend):**
 
 ```
-NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_API_URL=http://IP_ADDRESS:8000
 ```
 
 **.env (backend):**
 
 ```
-DB_DATABASE=task_manager
+DB_DATABASE=(nama database)
 DB_USERNAME=root
 DB_PASSWORD=
 ```
